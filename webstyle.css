@@ -13,15 +13,49 @@ nav {
     background-color: #723839;
     color: #EAEAEB;
     width: 100%;
+    max-height: 30%;
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 7px;
+    padding-top: 7px;
+}
+.nav-title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2vw;
+    font-family: "Radley";
+    flex-shrink: 0;
+    margin-left: 10px;
+}
+.nav-title img {
+    height: 10vh;
+    width: auto;
+    object-fit: contain;
+}
+.scale-title {
+    font-style: normal;
+    font-size: 10px;
+}
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    flex: 1 1 0;
+    max-width: 70%;
 }
 .nav-links li {
     list-style: none;
 }
+.link-icon-lowres{
+    flex-shrink: 0;
+    margin-right: 10px;
+}
 .link-icon-lowres img {
     width: auto;
     height: 3vh;
-    flex-shrink: 0;
 }
 .content-body {
     background-color: #010100;
