@@ -9,38 +9,11 @@ body {
 }
 /* navigation styles */
 nav {
+    position: fixed;
     background-color: #723839;
-    color:#EAEAEB;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 50px;
-    padding: 1em 0.5em;
-}
-.nav-title {
-    display: flex;
-    align-items: flex-end;
-}
-.nav-title cite {
     color: #EAEAEB;
-    margin-left: 10px;
-    font-family: "Radley";
-    font-style: normal;
-}
-.nav-title img {
-    height: 4em;
-    width: auto;
-    object-fit: contain;
-}
-.nav-links {
-    flex-grow: 4;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style-type: none;
-    gap: 1em;
-    margin: 0;
-    padding: 0;
 }
 .nav-links li {
     list-style: none;
@@ -48,11 +21,14 @@ nav {
 .link-icon-lowres img {
     width: auto;
     height: 3vh;
+    flex-shrink: 0;
 }
 .content-body {
     background-color: #010100;
+    color: #EAEAEB;
     flex: 1 1 auto;
 }
+/* Body styling */
 .container {
     display: grid;
     grid-template-areas: 
@@ -64,7 +40,7 @@ nav {
     background-color: #723839;
 }
 
-.container > div {
+.container div {
     text-align: center;
     background-color: aquamarine;
     padding: 20px;
