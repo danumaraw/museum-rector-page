@@ -1,21 +1,31 @@
-function scaleTextToFit(containerSelector, textSelector) {
-    const container = document.querySelector(containerSelector);
-    const text = container.querySelector(textSelector);
+function updateImageSize(image, referenceText) {
+  // hidden element to measure title height
+  const measureSpan = document.createElement('span');
+  measureSpan.className = 'measure-span';
+  measureSpan.style.font = window.getComputedStyle(referenceText).font;
+  measureSpan.textContent = 'Hg';
+  document.body.appendChild(measureSpan);
 
-    let fontSize = 10;
-    text.style.fontSize = fontSize + "px";
+  const textHeight = measureSpan.offsetHeight;
+  document.body.removeChild(measureSpan);
 
-  while (text.scrollWidth <= container.clientWidth && text.scrollHeight <= container.clientHeight) {
-    fontSize += 1;
-    text.style.fontSize = fontSize + "px";
-  }
-
-    text.style.fontSize = (fontSize - 1) + "px";
+  const aspectRatio = image.naturalWidth / image.naturalHeight;
+  image.style.height = `${textHeight}px`;
+  image.style.width = `${textHeight * aspectRatio}px`;
 }
 
-window.addEventListener('load', () => {
-    scaleTextToFit('.nav-title', '.scale-title');
-});
-window.addEventListener('resize', () => {
-    scaleTextToFit('.nav-title', '.scale-title');
-});
+function observeTextResize(imageId, referenceTextSelector) {
+  const referenceText = document.querySelector(referenceTextSelector);
+  const image = document.getElementById(imageId);
+
+  const resizeObserver = new ResizeObserver(() => {
+    updateImageSize(image, referenceText);
+  });
+
+  resizeObserver.observe(referenceText);
+  updateImageSize(image, referenceText); //initial call
+}
+
+window.onload = () => {
+  observeTextResize('imageToResize', '#textContainer');
+};

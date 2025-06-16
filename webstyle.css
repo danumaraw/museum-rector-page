@@ -1,4 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Andada+Pro:ital,wght@0,400..840;1,400..840&family=Radley:ital@0;1&display=swap');
+/* global custom styles */
+:root {
+    --fs-title: 5rem;
+    --fs-nav: 1.8rem;
+}
+@media screen and (max-width: 500px) {
+    :root {
+        --fs-title: 2.2rem;
+    }
+}
 body {
     display: flex;
     flex-direction: column;
@@ -14,48 +24,83 @@ nav {
     color: #EAEAEB;
     width: 100%;
     max-height: 30%;
+    box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
     padding-bottom: 7px;
     padding-top: 7px;
 }
 .nav-title {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    gap: 2vw;
+    gap: 1vw;
     font-family: "Radley";
-    flex-shrink: 0;
-    margin-left: 10px;
+    margin-left: 20px;
 }
-.nav-title img {
-    height: 10vh;
+/* .nav-title img {
+    max-height: 10vh;
     width: auto;
     object-fit: contain;
+} */
+.nav-title img {
+    display: inline-block;
+    vertical-align: middle;
 }
 .scale-title {
+    margin: 0;
+    font-size: var(--fs-title);
+    line-height: 0.7;
     font-style: normal;
-    font-size: 10px;
 }
 .nav-links {
     display: flex;
+    align-self: flex-end;
     justify-content: space-between;
-    margin: 0;
-    flex: 1 1 0;
-    max-width: 70%;
+    box-sizing: border-box;
+    margin-left: 20%;
+    margin-right: 20px;
+    flex: 1 1 auto;
 }
-.nav-links li {
-    list-style: none;
+.nav-links span {
+    font-family: "Andada Pro";
+    font-size: var(--fs-nav);
+    line-height: 1;
 }
 .link-icon-lowres{
-    flex-shrink: 0;
-    margin-right: 10px;
+    display: none; 
 }
-.link-icon-lowres img {
-    width: auto;
-    height: 3vh;
+/* element to resize Logo */
+.measure-span {
+    visibility: hidden;
+    position: absolute;
+    white-space: nowrap;
+    pointer-events: none;
+}
+/* For screens less than 768px */
+@media screen and (max-width: 800px) {
+    .nav-links {
+        display: none;
+    }
+    .link-icon-lowres {
+        display: block;
+        width: auto;
+        height: 6vh;
+        margin-left: auto;
+        margin-right: 20px;
+    }
+}
+@media screen and (max-width: 600px) {
+    nav {
+        padding-bottom: 2px;
+        padding-top: 2px;
+    }
+    .nav-title {
+        margin-left: 10px;
+    }
+    .link-icon-lowres {
+        margin-right: 10px;
+    }
 }
 .content-body {
     background-color: #010100;
@@ -79,17 +124,4 @@ nav {
     background-color: aquamarine;
     padding: 20px;
     margin: 20px;
-}
-
-.leftbox {
-    grid-area: leftbox;
-}
-.middlebox {
-    grid-area: middlebox;
-}
-.rightbox {
-    grid-area: rightbox;
-}
-.footer {
-    grid-area: footer;
 }
