@@ -4,6 +4,9 @@
     --fs-title: 5rem;
     --fs-nav: 1.8rem;
     --fs-dropdown: 1.2rem;
+    --fs-body-title: 4rem;
+    --fs-para: 1.1rem;
+    --fs-cth: 1.2rem;
     --col-white: #EAEAEB;
     --col-garnet: #723839;
     --col-black: #010100;
@@ -11,6 +14,7 @@
 @media screen and (max-width: 540px) {
     :root {
         --fs-title: 2.2rem;
+        --fs-body-title: 3rem;
     }
 }
 body {
@@ -40,11 +44,6 @@ nav {
     gap: 1vw;
     font-family: "Radley";
 }
-/* .nav-title img {
-    max-height: 10vh;
-    width: auto;
-    object-fit: contain;
-} */
 .nav-title img {
     display: inline-block;
     vertical-align: middle;
@@ -67,6 +66,10 @@ nav {
     font-size: var(--fs-nav);
     line-height: 1;
     position: relative;
+}
+.nav-links span a {
+    text-decoration: none;
+    color: inherit;
 }
 .nav-links span::before {
     content: "";
@@ -92,11 +95,19 @@ nav {
     white-space: nowrap;
     pointer-events: none;
 }
+/* dropdown styling */
 .dropdwn-con {
     background-color: var(--col-garnet);
     color: var(--col-white);
     display: none;
     font-size: var(--fs-dropdown);
+}
+.dropdwn-links li {
+   display: inline;
+   width: 100%;
+   text-align: center;
+   font-family: "Andada Pro";
+   padding: 5px 0px;
 }
 .dropdwn-links li:hover {
     background-color: var(--col-white);
@@ -113,9 +124,6 @@ nav {
         width: auto;
         height: 5vh;
     }
-    .dropdwn-con {
-        display: block;
-    }
     .dropdwn-links {
         display: flex;
         flex-direction: column;
@@ -125,11 +133,6 @@ nav {
         list-style: none;
         margin: 0;
         padding: 0;
-    }
-    .dropdwn-links li {
-        display: inline;
-        width: 100%;
-        text-align: center;
     }
     .dropdwn-links li a {
         text-decoration: none;
@@ -148,5 +151,61 @@ nav {
 .content-body {
     background-color:var(--col-black);
     color: var(--col-white);
+    padding: 0px 2vw;
     flex: 1 1 auto;
+    overflow: auto;
+}
+.content-title {
+    width: 100%;
+    height: 8rem;
+    display: inline-block;
+}
+.content-title h1 {
+    display: inline;
+    font-family: "Radley";
+    font-size: var(--fs-body-title);
+    font-weight: 500;
+    margin: 0;
+    vertical-align: middle;
+}
+.content-table-frame {
+    box-sizing: content-box;
+    border: 2px solid var(--col-white);
+    width: 40vw;
+    padding: 1px;
+}
+.content-table-head {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Andada Pro";
+    font-size: var(--fs-cth);
+    color: var(--col-white);
+    padding: 5px 20px;
+}
+.content-table-head img {
+    height: 24px;
+}
+.content-table {
+    display: block;
+}
+.content-table ul {
+    height: 100%;
+    width: auto;
+}
+.content-table ul li a {
+    color: inherit;
+}
+.content-table ul li:not(:first-child) {
+    margin-top: 10px;
+}
+@media screen and (max-width: 450px) {
+    .content-table-frame {
+        width: 50vw;
+    }
+    :root {
+        --fs-cth: 1rem;
+    }
+    .content-table-head img {
+        height: 20px;
+    }
 }
