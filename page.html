@@ -42,13 +42,13 @@
         </div>
             <div class="content-table" id="contentTable">
                 <ul>
-                    <li><a href="#">G. W. Blanchflower</a></li>
-                    <li><a href="#">A. H. Highton</a></li>
+                    <li><a href="#blanchflower">G. W. Blanchflower</a></li>
+                    <li><a href="#highton">A. H. Highton</a></li>
                 </ul>
             </div> 
         </div>
 
-        <div class="content-entry">
+        <div class="content-entry" id="blanchflower">
             <div class="entry-bullet"></div>
             <img src="blanchflower.jpg" class="entry-img">
             <div class="entry-title">
@@ -57,7 +57,7 @@
             </div>
             <p class="entry-para">filler text. this is filler text that will be added later.</p>
         </div>
-        <div class="content-entry">
+        <div class="content-entry" id="highton">
             <div class="entry-bullet"></div>
             <img src="highton.jpg" class="entry-img">
             <div class="entry-title">
@@ -67,6 +67,8 @@
             <p class="entry-para">filler text. this is filler text that will be added later.</p>
         </div>
     </div>
+    <button id="scrollBtn" title="scroll to top" onclick="scrollToTop()">&#x2B9D</button>
 <script src="LayoutScript.js"></script>
+<script src="ButtonScript.js" defer></script>
 </body>
 </html>
