@@ -156,19 +156,21 @@ nav {
 .content-body {
     background-color:var(--col-black);
     color: var(--col-white);
-    padding: 0px 2vw;
+    padding: 0 2vw 10px;
     flex: 1 1 auto;
     overflow: auto;
 }
+/* Body Page title */
 .content-title {
     display: flex;
-    width: 100%;
     height: 8rem;
     font-family: "Radley";
     box-sizing: border-box;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 4rem;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 5rem;
 }
 .content-title h1 {
     font-size: var(--fs-body-title);
@@ -177,11 +179,34 @@ nav {
     line-height: 1;
     margin: 0;
 }
+.content-title img {
+    width: 60%;
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+}
+.img-mask {
+    -webkit-mask-image: -webkit-gradient(linear, left top, right bottom, from(rgba(0,0,0,0), to(rgba(0,0,0,1))));
+    mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 94%, rgba(0,0,0,0) 100%);
+}
+@media screen and (max-width: 600px) {
+    .content-title {
+        height: 4rem;
+        margin-bottom: 2rem;
+    }
+}
+@media screen and (max-width: 350px) {
+    .content-title img {
+        display: none;
+    }
+}
+/* Table of Contents */
 .content-table-frame {
     box-sizing: content-box;
     border: 2px solid var(--col-white);
-    width: 40vw;
-    padding: 1px;
+    width: 42vw;
+    padding: 3px;
+    margin-bottom: 6rem;
 }
 .content-table-head {
     display: flex;
@@ -299,7 +324,6 @@ nav {
     .content-entry::after {
         top: 55px;
         left: 28px;
-        height: calc(100% + 42px);
         width: 3px;
     }
     .entry-img {
@@ -344,7 +368,7 @@ nav {
         grid-column-start: 1;
     }
 }
-#footnote {
+.footnote {
     display: block;
     font-size: var(--fs-para);
     color: var(--col-white);
@@ -357,7 +381,7 @@ nav {
     width: 50px;
     position: fixed;
     bottom: 75px;
-    right: 10vw;
+    right: 5vw;
     z-index: 999;
     border: none;
     outline: none;

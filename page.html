@@ -33,7 +33,10 @@
     </div>
     <!--Content area-->
     <div class="content-body">
-        <div class="content-title"><h1>Rectors</h1></div>
+        <div class="content-title">
+            <h1>Rectors</h1>
+            <img src="title-bg.jpg" class="img-mask">
+        </div>
 
         <!--Table of Contents-->
         <div class="content-table-frame">
@@ -45,14 +48,15 @@
                 <ul>
                     <li><a href="#blanchflower">G. W. Blanchflower</a></li>
                     <li><a href="#highton">A. H. Highton</a></li>
+                    <li><a href="#fowler">H. L. Fowler</a></li>
                 </ul>
             </div> 
         </div>
         <div class="entry-container">
-
+        <!--Create Entries here by adding the content-entry class and relevant classes-->
         <div class="content-entry" id="blanchflower">
             <div class="entry-bullet"></div>
-            <img src="blanchflower.jpg" class="entry-img">
+            <img class="entry-img" src="blanchflower.jpg">
             <div class="entry-title">
                 <h2>1881 - 1885</h2>
                 <h1>G. W. Blanchflower</h1>
@@ -72,17 +76,39 @@
         </div>
         <div class="content-entry" id="highton">
             <div class="entry-bullet"></div>
-            <img src="highton.jpg" class="entry-img">
+            <img class="entry-img" src="highton.jpg">
             <div class="entry-title">
                 <h2>1885 - 1893</h2>
                 <h1>A. H. Highton</h1>
             </div>
-            <p class="entry-para">filler text. this is filler text that will be added later.</p>
+            <p class="entry-para">
+                Mr Highton, who served as Headmaster from the late 1880s until 1893, was respected by both staff and 
+                pupils for his responsibility in leading the school and maintaining discipline. A tall and dignified 
+                figure, he possessed deep knowledge of mathematics and science, excelling particularly in 
+                experimental work, and through his service to the school he secured the addition of a science room 
+                and chemical laboratory in 1889. Although shy and reserved, he treated others with respect and was 
+                known for his compassion, offering personal assistance with science and mathematics to former 
+                students. He upheld honesty in conduct, delivering stern public rebukes when behaviour fell short, 
+                while remaining the perfect gentleman both in and out of school. His dedication to fostering learning, 
+                even beyond students’ formal schooling, demonstrated perseverance in supporting their intellectual growth.
+                <br><br> 
+                After his resignation in 1893, he pursued business in Underwood and later Victoria.
+            </p>
         </div>
-
+        <div class="content-entry" id="fowler">
+            <div class="entry-bullet"></div>
+            <img class="entry-img" src="fowler.jpg">
+            <div class="entry-title">
+                <h2>1893 - 1903</h2>
+                <h1>H. L. Fowler</h1>
+            </div>
+            <p class="entry-para">This is filler text.</p>
         </div>
-        <span id="footnote">All images avaliable physically at the Museum.</span>
+    <!--Do not create entries after this line-->
+        </div>
+        <span class="footnote">All images avaliable physically at the Museum.</span>
     </div>
+    <!--Scroll to Top Button-->
     <button id="scrollBtn" title="scroll to top" onclick="scrollToTop()">&#x2B9D</button>
 <script src="LayoutScript.js"></script>
 <script src="ButtonScript.js" defer></script>
