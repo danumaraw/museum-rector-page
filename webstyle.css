@@ -78,7 +78,7 @@ nav {
     gap: 2rem;
 }
 .nav-links span {
-    font-family: "Andada Pro";
+    font-family: "Andada Pro", 'Times New Roman', Times, serif;
     font-size: var(--fs-nav);
     line-height: 1;
     position: relative;
@@ -122,7 +122,7 @@ nav {
    display: inline;
    width: 100%;
    text-align: center;
-   font-family: "Andada Pro";
+   font-family: "Andada Pro", 'Times New Roman', Times, serif;
    padding: 5px 0px;
 }
 .dropdwn-links li:hover {
@@ -175,7 +175,7 @@ nav {
 .content-title {
     display: flex;
     height: 8rem;
-    font-family: "Radley";
+    font-family: "Radley", serif;
     box-sizing: border-box;
     flex-direction: column;
     justify-content: center;
@@ -222,7 +222,7 @@ nav {
 .content-table-head {
     display: flex;
     justify-content: space-between;
-    font-family: "Andada Pro";
+    font-family: "Andada Pro", 'Times New Roman', Times, serif;
     font-size: var(--fs-cth);
     color: var(--col-white);
     padding: 5px 20px;
@@ -259,7 +259,7 @@ nav {
 .intro-para {
     max-width: 60%;
     min-width: 50px;
-    font-family: "Andada Pro";
+    font-family: "Andada Pro", 'Times New Roman', Times, serif;
     font-size: var(--fs-para);
     line-height: 1.5;
 }
@@ -312,7 +312,7 @@ nav {
     justify-self: center;
 }
 .entry-title {
-    font-family: "Andada Pro";
+    font-family: "Andada Pro", 'Times New Roman', Times, serif;
 }
 .entry-title h2 {
     font-weight: 400;
@@ -327,7 +327,7 @@ nav {
     grid-row-start: 2;
     margin: 0;
     text-align: left;
-    font-family: "Andada Pro";
+    font-family: "Andada Pro", 'Times New Roman', Times, serif;
     font-size: var(--fs-para);
     white-space: normal;
     overflow-wrap: break-word;
